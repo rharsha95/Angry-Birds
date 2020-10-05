@@ -12,7 +12,7 @@ function setup() {
 
   ground = new Ground(400,390,800,20);
   box1 = new Box(500,340,80,80);
-  box2 = new Box(300,340,80,80);
+  box2 = new Box(550,200,80,80);
 
 }
 
