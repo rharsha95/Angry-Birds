@@ -1,18 +1,17 @@
-class Box {
+class Pig {
 
-    constructor(x,y,width,height) {
+    constructor(x,y) {
 
         var options = {
             restitution: 0.8,
-            friction: 0.3,
-            density: 1.0
+            friction: 0.3
         }
 
-        this.body = Bodies.rectangle(x,y,width,height, options);
+        this.body = Bodies.rectangle(x,y,50,50, options);
         World.add(world,this.body);
 
-        this.width = width;
-        this.height = height;
+        this.width = 50;
+        this.height = 50;
     }
 
     display() {
@@ -21,7 +20,7 @@ class Box {
         push();
         translate(pos.x,pos.y)
         rotate(this.angle);
-        fill("white");
+        fill("green");
         stroke(75);
         strokeWeight(5);
         rectMode(CENTER);
