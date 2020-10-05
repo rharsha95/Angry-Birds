@@ -7,7 +7,11 @@ var ground;
 var pig1, pig2;
 var log1,log2,log3,log4;
 var bird;
+var bgImage;
 
+function preload() {
+  bgImage = loadImage("sprites/bg.png");
+}
 function setup() {
   createCanvas(800,400);
   engine = Engine.create();
@@ -34,7 +38,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);  
+  background(bgImage);  
   Engine.update(engine);
 
   ground.display();
@@ -50,6 +54,5 @@ function draw() {
   log3.display();
   log4.display();
   bird.display();
-  text(mouseX + " , " + mouseY, mouseX, mouseY);
   
 }
